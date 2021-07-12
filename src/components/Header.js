@@ -1,78 +1,78 @@
 import React from 'react'
-import {
-  Button,
-  Container,
-  Navbar,
-  Nav,
-  FormControl,
-  Form,
-} from 'react-bootstrap'
 
 const Header = () => {
   return (
     <div>
-      <Navbar className='py-3 border-bottom'>
-        <Navbar.Brand href='#' data-testid='logo'>
+      <nav className='py-3 border-bottom navbar navbar-expand navbar-light'>
+        <a data-testid='logo' href='/#' className='navbar-brand'>
           <img src='logo192.png' width='40' alt='' />
-        </Navbar.Brand>
-        <Form inline className='mr-auto w-50' data-testid='search'>
-          <FormControl
-            type='text'
+        </a>
+        <form data-testid='search' className='mr-auto w-50 form-inline'>
+          <input
             placeholder='Search homes'
-            className='w-50'
+            type='text'
+            className='w-50 form-control'
           />
-        </Form>
-        <Nav className='ml-auto text-uppercase' data-testid='menu'>
-          <Nav.Link href='#home'>Become a host</Nav.Link>
-          <Nav.Link href='#link'>Help</Nav.Link>
-          <Nav.Link href='#link'>Sign up</Nav.Link>
-          <Nav.Link href='#link'>Login</Nav.Link>
-        </Nav>
-      </Navbar>
-      <Container className='m-0 px-4 py-2 container-fluid mw-100 border-bottom'>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+        </form>
+        <div data-testid='menu' className='ml-auto text-uppercase navbar-nav'>
+          <a href='#home' className='nav-link'>
+            Become a host
+          </a>
+          <a href='#link' className='nav-link'>
+            Help
+          </a>
+          <a href='#link' className='nav-link'>
+            Sign up
+          </a>
+          <a href='#link' className='nav-link'>
+            Login
+          </a>
+        </div>
+      </nav>
+      <div className='m-0 px-4 py-2 container-fluid mw-100 border-bottom container'>
+        <button
           data-testid='home-type'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
-          Home Type
-        </Button>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+          Home type
+        </button>
+        <button
           data-testid='dates'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
           Dates
-        </Button>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+        </button>
+        <button
           data-testid='guests'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
           Guests
-        </Button>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+        </button>
+        <button
           data-testid='price'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
           Price
-        </Button>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+        </button>
+        <button
           data-testid='rooms'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
-          Rooms and beds
-        </Button>
-        <Button
-          variant='outline-secondary'
-          className='text-nowrap mr-4 py-1'
+          Rooms
+        </button>
+        <button
           data-testid='amenities'
+          type='button'
+          className='text-nowrap mr-4 py-1 btn btn-outline-secondary'
         >
           Amenities
-        </Button>
-      </Container>
+        </button>
+      </div>
     </div>
   )
 }
